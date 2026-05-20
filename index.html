@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeMaster - Formatting Cheat Sheet</title>
+    
+    <!-- Favicon & Logo Paths -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- CSS Paths -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div class="splash-screen" id="splashScreen">
+        <div class="splash-content">
+            <!-- Logo Path -->
+            <div class="splash-logo">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+            <div class="splash-text">CodeMaster</div>
+            <div class="splash-subtext">Loading Formatting Guide...</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <!-- Logo Path -->
+                <img src="images/logo.png" alt="Logo" class="logo-img">
+                CodeMaster
+            </a>
+            <ul class="nav-links">
+                <li><a href="#html-section">HTML</a></li>
+                <li><a href="#css-section">CSS</a></li>
+                <li><a href="#examples">Examples</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn btn-outline" onclick="scrollToSection('examples')">Start Learning</button>
+                <button class="btn btn-primary" onclick="scrollToSection('html-section')">Get Started</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="stars" id="stars"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Master File Formatting <span>Instantly</span></h1>
+                <p>Learn how to structure and style your web pages with easy HTML and CSS examples. Visual guides for headings, text, colors, and layout.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-large" onclick="showSection('html')">HTML Basics</button>
+                    <button class="btn btn-outline btn-large" onclick="showSection('css')">CSS Styles</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="illustration-container">
+                    <!-- Hero Illustration Path -->
+                    <img src="images/heros/code-illustration.svg" alt="Coding Illustration" class="hero-illustration">
+                    <div class="floating-elements">
+                        <div class="float-element float-1"></div>
+                        <div class="float-element float-2"></div>
+                        <div class="float-element float-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main-content" id="examples">
+        <div class="container">
+            <div class="section-header">
+                <h2>Formatting Cheat Sheets</h2>
+                <p>Click "Run Code" to see how these formatting tags work</p>
+            </div>
+
+            <div class="section-tabs">
+                <button class="tab-btn active" onclick="switchTab('html')" id="html-tab">
+                    <!-- HTML Icon Path -->
+                    <img src="images/icons/html-icon.svg" alt="HTML" class="tab-icon">
+                    HTML
+                </button>
+                <button class="tab-btn" onclick="switchTab('css')" id="css-tab">
+                    <!-- CSS Icon Path -->
+                    <img src="images/icons/css-icon.svg" alt="CSS" class="tab-icon">
+                    CSS
+                </button>
+            </div>
+
+            <!-- HTML SECTION -->
+            <div class="tab-content active" id="html-content">
+                <div class="cheat-grid">
+                    
+                    <!-- Card 1: Basic Structure -->
+                    <div class="cheat-card" onclick="toggleExample('html1')">
+                        <h3>
+                            <div class="icon"></div>
+                            Basic File Structure
+                        </h3>
+                        <p>The boilerplate code needed to start any HTML file.</p>
+                        <div class="code-preview">
+                            <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    Content goes here
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </div>
+                        <button class="run-btn" onclick="event.stopPropagation(); runCode('html1')">Run Code</button>
+                        <div class="example-output" id="html1">
+                            <strong>Explanation:</strong> Every HTML file starts with &lt;!DOCTYPE html&gt; and wraps content in &lt;html&gt;, &lt;head&gt;, and &lt;body&gt; tags.
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Text Formatting -->
+                    <div class="cheat-card" onclick="toggleExample('html2')">
+                        <h3>
+                            <div class="icon">T</div>
+                            Text Formatting
+                        </h3>
+                        <p>How to make text bold, italic, or underlined.</p>
+                        <div class="code-preview">
+                            <pre>&lt;strong&gt;This is Bold&lt;/strong&gt;
+&lt;em&gt;This is Italic&lt;/em&gt;
+&lt;u&gt;This is Underline&lt;/u&gt;
+&lt;small&gt;Small Text&lt;/small&gt;</pre>
+                        </div>
+                        <button class="run-btn" onclick="event.stopPropagation(); runCode('html2')">Run Code</button>
+                        <div class="example-output" id="html2">
+                            <p><strong>This is Bold</strong></p>
+                            <p><em>This is Italic</em></p>
+                            <p><u>This is Underline</u></p>
+                            <p><small>Small Text</small></p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Headings -->
+                    <div class="cheat-card" onclick="toggleExample('html3')">
+                        <h3>
+                            <div class="icon">H1</div>
+                            Headings
+                        </h3>
+                        <p>Structure your content with headers from H1 to H6.</p>
+                        <div class="code-preview">
+                            <pre>&lt;h1&gt;Main Title&lt;/h1&gt;
+&lt;h2&gt;Subheading&lt;/h2&gt;
+&lt;h3&gt;Section Title&lt;/h3&gt;
+&lt;p&gt;Regular paragraph text goes here.&lt;/p&gt;</pre>
+                        </div>
+                        <button class="run-btn" onclick="event.stopPropagation(); runCode('html3')">Run Code</button>
+                        <div class="example-output" id="html3">
+                            <h1 style="font-size: 24px; margin: 5px 0;">Main Title</h1>
+                            <h2 style="font-size: 20px; margin: 5px 0;">Subheading</h2>
+                            <h3 style="font-size: 16px; margin: 5px 0;">Section Title</h3>
+                            <p style="font-size: 14px;">Regular paragraph text.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Lists -->
+                    <div class="cheat-card" onclick="toggleExample('html4')">
+                        <h3>
+                            <div class="icon">📝</div>
+                            Lists
+                        </h3>
+                        <p>Organize data with unordered (bullets) or ordered (numbers) lists.</p>
+                        <div class="code-preview">
+                            <pre>&lt;ul&gt;
+  &lt;li&gt;Bullet Item 1&lt;/li&gt;
+  &lt;li&gt;Bullet Item 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Number Item 1&lt;/li&gt;
+  &lt;li&gt;Number Item 2&lt;/li&gt;
+&lt;/ol&gt;</pre>
+                        </div>
+                        <button class="run-btn" onclick="event.stopPropagation(); runCode('html4')">Run Code</button>
+                        <div class="example-output" id="html4">
+                            <ul style="margin-left: 20px;">
+                                <li>Bullet Item 1</li>
+                                <li>Bullet Item 2</li>
+                            </ul>
+                            <ol style="margin-left: 20px;">
+                                <li>Number Item 1</li>
+                                <li>Number Item 2</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Line Breaks -->
+                    <div class="cheat-card" onclick="toggleExample('html5')">
+                        <h3>
+                            <div class="icon">↵</div>
+                            Line Breaks & Horizontal Lines
+                        </h3>
+                        <p>Separate text and content blocks.</p>
+                        <div class="code-preview">
+                            <pre>First line of text.
+&lt;br&gt;
+Second line of text.
+
+&lt;hr&gt;</pre>
+                        </div>
+                        <button class="run-btn" onclick="event.stopPropagation(); runCode('html5')">Run Code</button>
+                        <div class="example-output" id="html5">
+                            <p>First line of text.<br>Second line of text.</p>
+                            <hr style="border: 1px solid #667eea; opacity: 0.5;">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CSS SECTION -->
+            <div class="tab-content" id="css-content">
+                <div class="cheat-grid">
+                    
+                    <!-- Card 1: Colors -->
+                    <div class="cheat-card" onclick="toggleExample('css1')">
+                        <h3>
+                            <div class="icon">🎨</div>
+                            Colors & Backgrounds
+                        </h3>
+                        <p>Change text color and background color.</p>
+                        <div class="code-preview">
+                            <pre>.text-red {
+  color: red;
+}
+
+.bg-blue {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+}</pre>
+                        </div>
+                        <button class="run-btn" onclick="event.stopPropagation(); runCode('css1')">Run Code</button>
+                        <div class="example-output" id="css1">
+                            <p style="color: #f07178;">This text is Red</p>
+                            <div style="background-color: #667eea; color: white; padding: 10px; border-radius: 5px;">
+                                This has a Blue Background
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Fonts -->
+                    <div class="cheat-card" onclick="toggleExample('css2')">
+                        <h3>
+                            <div class="icon">Aa</div>
+                            Font Formatting
+                        </h3>
+                        <p>Change font size, family, and alignment.</p>
+                        <div class="code-preview">
+                            <pre>.big-text {
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}</pre>
+                        </div>
+                        <button class="run-btn" onclick="event.stopPropagation(); runCode('css2')">Run Code</button>
+                        <div class="example-output" id="css2">
+                            <p style="font-size: 24px; font-family: Arial, sans-serif; text-align: center;">
+                                Centered Big Text
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Box Model -->
+                    <div class="cheat-card" onclick="toggleExample('css3')">
+                        <h3>
+                            <div class="icon">📦</div>
+                            Margins & Padding
+                        </h3>
+                        <p>Control spacing inside (padding) and outside (margin) elements.</p>
+                        <div class="code-preview">
+                            <pre>.box {
+  padding: 20px; /* Space inside */
+  margin: 10px;  /* Space outside */
+  border: 2px solid black;
+}</pre>
+                        </div>
+                        <button class="run-btn" onclick="event.stopPropagation(); runCode('css3')">Run Code</button>
+                        <div class="example-output" id="css3">
+                            <div style="padding: 20px; margin: 10px; border: 2px solid #667eea; background: rgba(255,255,255,0.05); border-radius: 8px;">
+                                I have Padding & Border
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Borders -->
+                    <div class="cheat-card" onclick="toggleExample('css4')">
+                        <h3>
+                            <div class="icon">🔲</div>
+                            Border Radius
+                        </h3>
+                        <p>Make corners rounded.</p>
+                        <div class="code-preview">
+                            <pre>.round-box {
+  border-radius: 15px;
+  background-color: purple;
+}</pre>
+                        </div>
+                        <button class="run-btn" onclick="event.stopPropagation(); runCode('css4')">Run Code</button>
+                        <div class="example-output" id="css4">
+                            <div style="width: 100px; height: 50px; background: #764ba2; border-radius: 15px; display: flex; align-items: center; justify-content: center; color: white;">
+                                Rounded
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Display Block -->
+                    <div class="cheat-card" onclick="toggleExample('css5')">
+                        <h3>
+                            <div class="icon">🧱</div>
+                            Display Block
+                        </h3>
+                        <p>Force elements to take up the full width.</p>
+                        <div class="code-preview">
+                            <pre>.full-width {
+  display: block;
+  width: 100%;
+}</pre>
+                        </div>
+                        <button class="run-btn" onclick="event.stopPropagation(); runCode('css5')">Run Code</button>
+                        <div class="example-output" id="css5">
+                            <div style="display: block; width: 100%; background: #667eea; color: white; padding: 10px; text-align: center; border-radius: 5px;">
+                                Full Width Block
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 CodeMaster. Simple HTML & CSS Guide.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Paths -->
+    <script src="js/splash.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/interactions.js"></script>
+</body>
+</html>

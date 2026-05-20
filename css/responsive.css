@@ -1,0 +1,44 @@
+@media (max-width: 1200px) {
+    .hero-content h1 { font-size: 52px; }
+    .cheat-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+}
+
+@media (max-width: 968px) {
+    .hero-container { grid-template-columns: 1fr; gap: 40px; }
+    .hero-content h1 { font-size: 42px; text-align: center; }
+    .hero-content p { text-align: center; }
+    .hero-buttons { justify-content: center; }
+    .hero-visual { order: -1; }
+    .illustration-container { height: 350px; }
+    .nav-links { display: none; }
+    .section-header h2 { font-size: 36px; }
+    .cheat-grid { grid-template-columns: 1fr; }
+    .section-tabs { flex-direction: column; align-items: center; }
+    .tab-btn { width: 200px; justify-content: center; }
+}
+
+@media (max-width: 768px) {
+    nav { padding: 15px 20px; }
+    .hero { padding: 100px 20px 40px; }
+    .hero-content h1 { font-size: 36px; }
+    .hero-content p { font-size: 16px; }
+    .hero-buttons { flex-direction: column; gap: 15px; }
+    .btn-large { width: 100%; text-align: center; }
+    .main-content { padding: 60px 20px; }
+    .section-header h2 { font-size: 32px; }
+    .cheat-card { padding: 20px; }
+    .code-preview { padding: 15px; font-size: 12px; }
+    footer { padding: 30px 20px; }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 { font-size: 28px; }
+    .splash-text { font-size: 24px; }
+    .splash-logo { width: 80px; height: 80px; }
+    .splash-logo img { width: 50px; height: 50px; }
+    .nav-buttons { gap: 10px; }
+    .btn { padding: 10px 20px; font-size: 14px; }
+    .section-header h2 { font-size: 28px; }
+    .tab-btn { padding: 12px 30px; font-size: 14px; }
+    .cheat-card h3 { font-size: 18px; }
+}
